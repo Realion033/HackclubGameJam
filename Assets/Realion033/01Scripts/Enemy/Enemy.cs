@@ -12,6 +12,7 @@ namespace Realion033
 
         public NavMeshAgent _navMesh { get; private set; }
         public Rigidbody _rb { get; private set; }
+        public Animator _animator { get; private set; }
         private EnemyStateMachine _machine = new EnemyStateMachine();
 
         #region UNITY_EVENTS
