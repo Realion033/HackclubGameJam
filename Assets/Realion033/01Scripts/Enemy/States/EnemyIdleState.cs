@@ -13,6 +13,7 @@ namespace Realion033
         public override void OnEnter()
         {
             base.OnEnter();
+            //SoundManager.Instance.PlayAudio();
         }
 
         public override void OnUpdate()
