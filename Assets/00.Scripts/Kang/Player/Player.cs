@@ -21,8 +21,6 @@ public class Player : MonoBehaviour
         playerAnim = GetComponent<PlayerAnimation>();
         playerMovement = GetComponent<PlayerMovement>();
         _capsuleCollider = transform.Find("Collider").GetComponent<CapsuleCollider>();
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
     }
     public void StartPhysics()
     {

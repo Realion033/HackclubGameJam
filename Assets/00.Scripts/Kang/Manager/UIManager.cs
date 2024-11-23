@@ -14,7 +14,7 @@ public enum Dir : short
 public struct UI
 {
     public RectTransform changeUI;
-    public CanvasGroup fadeUI;
+    public Image fadeUI;
     public TextMeshProUGUI fadeText;
     public Dir dir;
     public Vector2 inAndOut;
@@ -24,47 +24,31 @@ public struct UI
 }
 public class UIManager : SingleTon<UIManager>
 {
-    public UI[] gameOverUI;
     public UI[] mainUI;
     public UI[] playUI;
+    public UI[] settingUI;
     public GameObject block;
-    public Image taskbar;
-    public TextMeshProUGUI timeText;
-
-    private void Update()
-    {
-        if(timeText != null)
-        {
-            string date = DateTime.Now.ToString("yyyy-MM-dd");
-            string time = DateTime.Now.ToString("HH:mm");
-
-            timeText.text = time + "\n" + date;
-        }
-    }
-    public void GameOverUIIn()
-    {
-        In(gameOverUI);
-    }
-    public void GameOverUIOut()
-    {
-        Out(gameOverUI);
-    }
-    public void MainUIIn()
-    {
-        In(mainUI);
-    }
-
-    public void MainUIOut()
-    {
-        Out(mainUI);
-    }
-    public void PlayUIIn()
-    {
-        In(playUI);
-    }
+    public Image blind;
+    public GameObject pauseUI;
+    bool canPause = true;
+    public void MainUIIn() => In(mainUI);
+    public void MainUIOut() => Out(mainUI);
+    public void PlayUIIn() => In(playUI);
     public void PlayUIOut()
     {
         Out(playUI);
+    }
+
+
+    public void SettingUIIn()
+    {
+        In(settingUI);
+        canPause = false;
+    }
+    public void SettingUIOut()
+    {
+        Out(settingUI);
+        canPause = true;
     }
     private void In(UI[] lst)
     {
@@ -76,18 +60,18 @@ public class UIManager : SingleTon<UIManager>
             if (lst[i].changeUI != null)
             {
                 if (lst[i].setActive) lst[i].changeUI.gameObject.SetActive(true);
-                if (lst[i].dir == Dir.y) lst[i].changeUI.DOAnchorPosY(lst[i].inAndOut.x, lst[i].time).SetUpdate(true).SetEase(Ease.Linear);
-                else lst[i].changeUI.DOAnchorPosX(lst[i].inAndOut.x, lst[i].time).SetUpdate(true).SetEase(Ease.Linear);
+                if (lst[i].dir == Dir.y) lst[i].changeUI.DOAnchorPosY(lst[i].inAndOut.x, lst[i].time).SetEase(Ease.Linear).SetUpdate(true);
+                else lst[i].changeUI.DOAnchorPosX(lst[i].inAndOut.x, lst[i].time).SetEase(Ease.Linear).SetUpdate(true);
             }
             else if (lst[i].fadeUI != null)
             {
                 if (lst[i].setActive) lst[i].fadeUI.gameObject.SetActive(true);
-                lst[i].fadeUI.DOFade(lst[i].fadeFloat / 255f, lst[i].time).SetUpdate(true).SetEase(Ease.Linear);
+                lst[i].fadeUI.DOFade(lst[i].fadeFloat / 255f, lst[i].time).SetEase(Ease.Linear).SetUpdate(true);
             }
             else
             {
                 if (lst[i].setActive) lst[i].changeUI.gameObject.SetActive(true);
-                lst[i].fadeText.DOFade(lst[i].fadeFloat / 255f, lst[i].time).SetUpdate(true).SetEase(Ease.Linear);
+                lst[i].fadeText.DOFade(lst[i].fadeFloat / 255f, lst[i].time).SetEase(Ease.Linear).SetUpdate(true);
             }
         }
         StartCoroutine(BlockTime(max));
@@ -139,5 +123,26 @@ public class UIManager : SingleTon<UIManager>
     {
         yield return new WaitForSecondsRealtime(time);
         block.SetActive(false);
+    }
+
+    public void Blind()
+    {
+        blind.color = new Color(0f, 0f, 0f, 1f);
+        blind.gameObject.SetActive(true);
+    }
+    public void BlindOff(float time)
+    {
+        blind.color = new Color(0f, 0f, 0f, 1f);
+        blind.gameObject.SetActive(true);
+        blind.DOFade(0f, time).OnComplete(() =>
+        {
+            blind.gameObject.SetActive(false);
+        });
+    }
+    public void BlindOn(float time)
+    {
+        blind.color = new Color(0f, 0f, 0f, 0f);
+        blind.gameObject.SetActive(true);
+        blind.DOFade(1f, time);
     }
 }
