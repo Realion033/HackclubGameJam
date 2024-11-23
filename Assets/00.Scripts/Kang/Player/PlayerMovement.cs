@@ -155,8 +155,11 @@ public class PlayerMovement : MonoBehaviour
         velocity.x = worldMovement.x * _moveSpeed;
         velocity.z = worldMovement.z * _moveSpeed;
 
-        velocity = velocity * Mathf.Lerp(1, 0, (Vector3.Project(velocity, _rb.linearVelocity) + _rb.linearVelocity).magnitude / (_maxMoveSpeed* _direction.magnitude));
-        _rb.AddForce(velocity,ForceMode.Impulse);
+        if (velocity.sqrMagnitude > 0.2f)
+        {
+            velocity = velocity * Mathf.Lerp(1, 0, (Vector3.Project(velocity, _rb.linearVelocity) + _rb.linearVelocity).magnitude / (_maxMoveSpeed * _direction.magnitude));
+            _rb.AddForce(velocity, ForceMode.Impulse);
+        }
     }
 
     public void Jump()
