@@ -93,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
             _pitch += _camSpeed * 0.1f * pos.y;
             _pitch = Mathf.Clamp(_pitch, -60f, 80f);
 
-            _camTrm.localEulerAngles = new Vector3(-_pitch, -88.9f, 3.536f);
+            _camTrm.localEulerAngles = new Vector3(-_pitch, _camTrm.localEulerAngles.y, _camTrm.localEulerAngles.z);
         }
     }
 
