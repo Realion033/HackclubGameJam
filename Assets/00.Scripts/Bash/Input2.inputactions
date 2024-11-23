@@ -69,10 +69,10 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Sliding",
+                    "name": "Dash",
                     "type": "Button",
                     "id": "699467e6-bc90-4ecf-a1eb-aae06cbe00ca",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -81,7 +81,7 @@
                     "name": "Jump",
                     "type": "Button",
                     "id": "cdf25efa-e82f-4fb9-82e1-3ba4024a413c",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -326,7 +326,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Sliding",
+                    "action": "Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -351,7 +351,7 @@
                     "name": "Esc",
                     "type": "Button",
                     "id": "8d685db6-fef7-423d-85bf-06066f46b00e",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false

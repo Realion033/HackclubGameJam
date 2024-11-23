@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 namespace bash
@@ -16,6 +17,7 @@ namespace bash
         {
             _input = new Input2();
             _input.Actions.SetCallbacks(this);
+            _input.Utils.SetCallbacks(this);
             _input.Enable();
 
         }
@@ -32,7 +34,8 @@ namespace bash
 
         public void OnEsc(InputAction.CallbackContext context)
         {
-            //throw new NotImplementedException();
+            Cursor.lockState = Cursor.visible ? CursorLockMode.Locked: CursorLockMode.Confined;
+            Cursor.visible = !Cursor.visible;
         }
 
         public void OnMouseButton(InputAction.CallbackContext context)
@@ -67,7 +70,7 @@ namespace bash
             movement = context.ReadValue<Vector2>();
         }
 
-        public void OnSliding(InputAction.CallbackContext context)
+        public void OnDash(InputAction.CallbackContext context)
         {
             if (context.started)
             {
@@ -88,6 +91,11 @@ namespace bash
         {
             if (context.performed)
                 RPlayerMana.Instance.jumpAction();
+        }
+
+        public void OnSliding(InputAction.CallbackContext context)
+        {
+            throw new NotImplementedException();
         }
     }
 }
