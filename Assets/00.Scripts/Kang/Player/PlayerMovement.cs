@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using System;
+using bash;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = 5f;
+    [SerializeField] private float _maxMoveSpeed = 10f;
     [SerializeField] private float _camSpeed = 5f;
     [SerializeField] private float _jumpPower = 200f;
 
@@ -93,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
             _pitch += _camSpeed * 0.1f * pos.y;
             _pitch = Mathf.Clamp(_pitch, -60f, 80f);
 
-            _camTrm.localEulerAngles = new Vector3(-_pitch, -88.9f, 3.536f);
+            _camTrm.localEulerAngles = new Vector3(-_pitch, _camTrm.localEulerAngles.y, _camTrm.localEulerAngles.z);
         }
     }
 
@@ -140,8 +142,9 @@ public class PlayerMovement : MonoBehaviour
         int weight = 1;
 
         if (_player.playerInput.Shift) weight *= 2;
+        _rb.linearVelocity = BashUtils.V3X0Z(_rb.linearVelocity)/ 1.5f + Vector3.up * _rb.linearVelocity.y;
 
-        Vector3 velocity = _rb.linearVelocity;
+        Vector3 velocity = Vector3.zero;//= _rb.linearVelocity;
 
         Vector3 localMovement = new Vector3(input.x * weight, 0, input.y * weight);
         _direction = Vector3.Lerp(_direction, localMovement, 7f * Time.deltaTime);
@@ -152,14 +155,16 @@ public class PlayerMovement : MonoBehaviour
         velocity.x = worldMovement.x * _moveSpeed;
         velocity.z = worldMovement.z * _moveSpeed;
 
-        _rb.linearVelocity = velocity;
+        velocity = velocity * Mathf.Lerp(1, 0, (Vector3.Project(velocity, _rb.linearVelocity) + _rb.linearVelocity).magnitude / (_maxMoveSpeed* _direction.magnitude));
+        _rb.AddForce(velocity,ForceMode.Impulse);
     }
 
     public void Jump()
     {
         if (grounded && _rb.isKinematic == false)
         {
-            _rb.linearVelocity = new Vector3(_rb.linearVelocity.x, _jumpPower, _rb.linearVelocity.z);
+            //_rb.linearVelocity = new Vector3(_rb.linearVelocity.x, _jumpPower, _rb.linearVelocity.z);
+            _rb.AddForce(Vector3.up * _jumpPower, ForceMode.Impulse);
         }
     }
 }
