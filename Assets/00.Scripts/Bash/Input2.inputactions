@@ -9,7 +9,7 @@
                     "name": "Change",
                     "type": "Button",
                     "id": "3b950b5a-6471-428b-b42e-8c57393f3e75",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -322,7 +322,7 @@
                 {
                     "name": "",
                     "id": "de04513e-9147-4428-be3f-a40c27ecedc4",
-                    "path": "<Keyboard>/ctrl",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -19,6 +19,9 @@ namespace bash
         float _maxSpeed = 10, _accelation = 25, _jumpPower = 5, _damp = 3, _gravity = -11, _plHeight = 2, _plRaius = 0.26f; //PlayerState�� �� ������
         [SerializeField]
         float _mouseSpeed = 5f;//PlayerSettingMing ���� ���ߵ�
+        [SerializeField]
+        float _runSpeedMulti = 2f;
+        private bool _isRunning;
 
 
         public bool _isCanJump, _isGround;
@@ -81,7 +84,7 @@ namespace bash
 
             //    _movDir = input * (Mathf.Lerp(1, 0, (Vector3.Project(input, rigidbody.velocity) + rigidbody.velocity).magnitude / _maxSpeed)
             //+ Vector3.Project(input, -rigidbody.velocity.normalized).magnitude);
-            _movDir = input * Mathf.Lerp(1, 0, (Vector3.Project(input, rigidbody.linearVelocity) + rigidbody.linearVelocity).magnitude / _maxSpeed);
+            _movDir = input * Mathf.Lerp(1, 0, (Vector3.Project(input, rigidbody.linearVelocity) + rigidbody.linearVelocity).magnitude / (_maxSpeed* (RPlayerMana.Instance.playerInput.isSliding ? 1: _runSpeedMulti)));
 
 
             //_movDir += Vector3.Project(input, Quaternion.Euler(0, 90, 0) * rigidbody.velocity.normalized);
