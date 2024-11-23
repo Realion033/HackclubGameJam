@@ -1,4 +1,5 @@
 using bash;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -16,6 +17,10 @@ public class Gun : MonoBehaviour
     float _volume = 0.5f;
     [SerializeField]
     Animator _anime;
+    [SerializeField]
+    LayerMask _layerMask;
+    [SerializeField]
+    float _force;
 
     private void Update()
     {
@@ -31,7 +36,15 @@ public class Gun : MonoBehaviour
         {
             _particle.Play();
             _source.PlayOneShot(_clip, Random.Range(_volume - 0.1f, _volume + 0.1f));
-
+                RaycastHit hit;
+                if (Physics.Raycast(transform.position, transform.forward, out hit, 999f, _layerMask))
+                {
+                    if (hit.transform.TryGetComponent<Rigidbody>(out Rigidbody ri))
+                    {
+                    
+                        ri.AddForce(transform.forward * _force *(Keyboard.current[Key.Q].isPressed ? -1.5f:1.0f), ForceMode.Impulse);
+                    }
+                }
         }
         else
         {
