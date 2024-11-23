@@ -10,17 +10,18 @@ namespace Realion033
         public float speed;
         [SerializeField] private LayerMask _whatIsPlayer;
 
-        public NavMeshAgent _navMesh { get; private set; }
-        public Rigidbody _rb { get; private set; }
-        public Animator _animator { get; private set; }
+        public NavMeshAgent navMesh { get; private set; }
+        public Rigidbody rb { get; private set; }
+        public Animator animator { get; private set; }
         private EnemyStateMachine _machine = new EnemyStateMachine();
 
         #region UNITY_EVENTS
 
         private void Awake()
         {
-            _navMesh = GetComponent<NavMeshAgent>();
-            _rb = GetComponent<Rigidbody>();
+            navMesh = GetComponent<NavMeshAgent>();
+            rb = GetComponent<Rigidbody>();
+            animator = GetComponentInChildren<Animator>();
 
             ReflectionStates();
         }
