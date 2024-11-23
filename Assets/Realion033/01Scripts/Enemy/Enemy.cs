@@ -14,6 +14,11 @@ namespace Realion033
         [SerializeField] private LayerMask _whatIsPlayer;
         [SerializeField] private LayerMask _whatIsObstacle;
 
+        [Header("Sound Source")]
+        public AudioClip idleSound;
+        public AudioClip chaseSound;
+        public AudioClip slideSound;
+
         //component
         public Animator animator;
         public EnemyMovement movement;
