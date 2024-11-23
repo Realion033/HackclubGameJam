@@ -252,6 +252,7 @@ GameObject:
   - component: {fileID: 595605137}
   - component: {fileID: 595605136}
   - component: {fileID: 595605135}
+  - component: {fileID: 595605139}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -341,13 +342,98 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 595605134}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.08715578, y: 0, z: 0, w: 0.9961947}
   m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 10, y: 1, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1159231854}
+  m_LocalEulerAnglesHint: {x: -10, y: 0, z: 0}
+--- !u!114 &595605139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595605134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 1
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 360c3fc3e50ec7b41b55c049cc366553, type: 2}
+  m_BuildHeightMesh: 0
+--- !u!1 &606116890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 606116891}
+  - component: {fileID: 606116892}
+  m_Layer: 6
+  m_Name: PlayerPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &606116891
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606116890}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.82, z: -3.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &606116892
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606116890}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1159231853
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,6 +685,7 @@ GameObject:
   - component: {fileID: 2045535267}
   - component: {fileID: 2045535268}
   - component: {fileID: 2045535269}
+  - component: {fileID: 2045535270}
   m_Layer: 7
   m_Name: EnemySoccerPlayer
   m_TagString: Untagged
@@ -615,7 +702,7 @@ Transform:
   m_GameObject: {fileID: 2045535261}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: -7}
+  m_LocalPosition: {x: 0, y: 2, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -648,7 +735,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!195 &2045535268
 NavMeshAgent:
@@ -657,7 +744,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2045535261}
-  m_Enabled: 0
+  m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -684,10 +771,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45746d8b7d78be548a3245e8423135ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 3
+  runAwayDistance: 7
+  targetTrm: {fileID: 0}
   _whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 64
+  _whatIsObstacle:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!114 &2045535270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045535261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d57d72d7c7848ab40b2b3b70f69f3662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1205323681193099459
 Transform:
   m_ObjectHideFlags: 0
@@ -713,7 +817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1205323681193099459}
   - component: {fileID: 6461397466295503592}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: GroundTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -730,7 +834,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7440695318303206276}
   - component: {fileID: 9173056132441524851}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -781,7 +885,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3838715193864757525}
-  m_Material: {fileID: 13400000, guid: 23d81e2ea4f2d774eb3fa20153413586, type: 2}
+  m_Material: {fileID: 13400000, guid: 57b3e0e52e9f7054289733afedb089de, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -805,3 +909,4 @@ SceneRoots:
   - {fileID: 4686376}
   - {fileID: 1159231854}
   - {fileID: 2045535265}
+  - {fileID: 606116891}
