@@ -691,9 +691,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45746d8b7d78be548a3245e8423135ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
   _whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

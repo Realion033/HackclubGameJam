@@ -7,7 +7,7 @@ namespace Realion033
     public class Enemy : MonoBehaviour
     {
         [Header("EnemySetting")]
-        public float speed { get; set; }
+        public float speed;
         [SerializeField] private LayerMask _whatIsPlayer;
 
         public NavMeshAgent _navMesh { get; private set; }
@@ -45,7 +45,7 @@ namespace Realion033
                 string typeName = stateEnum.ToString();
                 try
                 {
-                    Type t = Type.GetType($"Enemy{typeName}State");
+                    Type t = Type.GetType($"Realion033.Enemy{typeName}State");
                     Debug.Log(t);
                     EnemyState state = Activator.CreateInstance(t, this, _machine) as EnemyState;
                     Debug.Log(state);
