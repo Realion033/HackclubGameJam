@@ -5,8 +5,8 @@ namespace Realion033
 {
     public class EnemyMovement : MonoBehaviour
     {
-        private Enemy _enemy;
-        private NavMeshAgent _navMesh;
+        protected Enemy _enemy;
+        protected NavMeshAgent _navMesh;
         private Rigidbody _rb;
 
         #region UNITY_FUNC
@@ -16,11 +16,19 @@ namespace Realion033
             _enemy = GetComponent<Enemy>();
             _navMesh = GetComponent<NavMeshAgent>();
             _rb = GetComponent<Rigidbody>();
+        }
 
+        private void Update()
+        {
+            if (_navMesh.enabled == false)
+            {
+                return;
+            }
             _navMesh.speed = _enemy.speed;
         }
 
         #endregion
+
         #region MainFunc
 
         public void SetDestination(Vector3 destination)
@@ -50,8 +58,6 @@ namespace Realion033
             // 회전 속도에 맞게 회전
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
-
-
 
         #endregion
     }

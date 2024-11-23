@@ -8,18 +8,20 @@ namespace Realion033
         [Header("EnemySetting")]
         public float speed;
         public float runAwayDistance;
+        public float onAttackDistance;
         [SerializeField] public Transform targetTrm;
+        [SerializeField] public Transform endTrm;
         [SerializeField] private LayerMask _whatIsPlayer;
         [SerializeField] private LayerMask _whatIsObstacle;
 
         //component
-        public Animator animator { get; private set; }
-        public EnemyMovement movement { get; private set; }
+        public Animator animator;
+        public EnemyMovement movement;
         private EnemyStateMachine _machine = new EnemyStateMachine();
 
         //protected
-
         protected Collider[] _enemyCheckColliders;
+        protected Collider[] _enemyCheckCollidersAttack;
 
         #region UNITY_EVENTS
 
@@ -28,8 +30,11 @@ namespace Realion033
             animator = GetComponentInChildren<Animator>();
             movement = GetComponent<EnemyMovement>();
 
-            _enemyCheckColliders = new Collider[99];
+            //endTrm = GameObject.Find("SetDestiend").GetComponent<Transform>();
 
+            _enemyCheckColliders = new Collider[99];
+            _enemyCheckCollidersAttack = new Collider[99];
+            
             ReflectionStates();
         }
 
@@ -47,6 +52,8 @@ namespace Realion033
         {
             Gizmos.color = Color.green;
             Gizmos.DrawWireSphere(transform.position, runAwayDistance);
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, onAttackDistance);
         }
 
         #endregion
@@ -55,7 +62,17 @@ namespace Realion033
 
         public Collider IsPlayerDetected()
         {
-            int cnt = Physics.OverlapSphereNonAlloc(transform.position, runAwayDistance, _enemyCheckColliders, _whatIsPlayer);
+            int cnt = Physics.OverlapSphereNonAlloc(transform.position, runAwayDistance, 
+            _enemyCheckColliders, _whatIsPlayer);
+            Debug.Log(cnt);
+            return cnt >= 1 ? _enemyCheckColliders[0] : null;
+        }
+
+        public Collider IsPlayerOnAttackDetected()
+        {
+            int cnt = Physics.OverlapSphereNonAlloc(transform.position, onAttackDistance, 
+            _enemyCheckCollidersAttack, _whatIsPlayer);
+
             return cnt >= 1 ? _enemyCheckColliders[0] : null;
         }
 
