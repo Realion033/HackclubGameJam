@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class Gun : MonoBehaviour
 {
     [SerializeField]
-    private int _ammo = 30, _maxAmmo=30;
+    private int _ammo = 10, _maxAmmo=10;
     [SerializeField]
     private ParticleSystem _particle;
     [SerializeField]
@@ -45,6 +45,7 @@ public class Gun : MonoBehaviour
                         ri.AddForce(transform.forward * _force *(Keyboard.current[Key.Q].isPressed ? -1.5f:1.0f), ForceMode.Impulse);
                     }
                 }
+            _ammo--;
         }
         else
         {
