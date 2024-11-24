@@ -15,7 +15,9 @@ namespace Realion033
         public override void OnEnter()
         {
             base.OnEnter();
-
+            _enemy._audioSource.clip = _enemy.slideSound;
+            _enemy._audioSource.loop = false;
+            _enemy._audioSource.Play();
             // 슬라이드 방향 계산 (현재 적의 진행 방향 고정)
             Vector3 direction = _enemy.targetTrm.position - _enemy.transform.position;
             _dashDirection = direction.normalized;

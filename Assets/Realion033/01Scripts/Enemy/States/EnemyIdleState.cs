@@ -14,7 +14,6 @@ namespace Realion033
         {
             base.OnEnter();
             _enemy.movement._rb.isKinematic = true;
-            //SoundManager.Instance.PlayAudio();
         }
 
         public override void OnUpdate()
