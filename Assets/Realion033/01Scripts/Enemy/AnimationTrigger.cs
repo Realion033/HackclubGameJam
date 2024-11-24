@@ -19,7 +19,9 @@ namespace Realion033{
 
             public void DestinationOff()
             {
-                _rb.AddForce(transform.forward * _enemy.speed * 5f, ForceMode.Impulse);
+            _enemy._audioSource.clip = _enemy.die;
+            _enemy._audioSource.Play();
+            _rb.AddForce(transform.forward * _enemy.speed * 5f, ForceMode.Impulse);
                 _navMesh.enabled = false;
                 _animator.enabled = false;
             }
