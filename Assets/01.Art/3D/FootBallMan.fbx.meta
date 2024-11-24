@@ -80,7 +80,132 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: FootBallMan(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cube
+      parentName: FootBallMan(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: "\uC544\uB9C8\uD29C\uC5B4"
+      parentName: FootBallMan(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: "\uBCF8"
+      parentName: "\uC544\uB9C8\uD29C\uC5B4"
+      position: {x: 0, y: -0.000000009536743, z: 0.0790761}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: "\uBCF8.001"
+      parentName: "\uBCF8"
+      position: {x: -0, y: 0.01, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: "\uBCF8.002"
+      parentName: "\uBCF8.001"
+      position: {x: -0, y: 0.025672045, z: 0}
+      rotation: {x: 0.004318187, y: 1.4444832e-17, z: 1.4444828e-17, w: 0.9999907}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: "\uBCF8.003"
+      parentName: "\uBCF8.002"
+      position: {x: 2.9209815e-26, y: 0.0126655195, z: -1.8626451e-11}
+      rotation: {x: -0.017647449, y: -1.2425542e-16, z: -1.2369456e-16, w: 0.9998443}
+      scale: {x: 1, y: 1, z: 1}
+    - name: "\uBCF8.007"
+      parentName: "\uBCF8.003"
+      position: {x: 6.555428e-25, y: 0.0041033267, z: -2.7929749e-11}
+      rotation: {x: 0.019026777, y: -7.5796343e-23, z: -4.2248783e-18, w: 0.999819}
+      scale: {x: 1, y: 1, z: 1}
+    - name: "\uBCF8.007_end"
+      parentName: "\uBCF8.007"
+      position: {x: -0, y: 0.01919799, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Arm_R
+      parentName: "\uBCF8.002"
+      position: {x: 0.012141526, y: 0.0034229879, z: 0.00007982543}
+      rotation: {x: 0.0032570404, y: 0.0029590912, z: -0.7184378, w: 0.6955773}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: Arm2_R
+      parentName: Arm_R
+      position: {x: 3.6525308e-10, y: 0.020301182, z: -4.8894434e-11}
+      rotation: {x: -0.0002247916, y: -0.0000001904851, z: 0.012896659, w: 0.99991685}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+    - name: Hand_R
+      parentName: Arm2_R
+      position: {x: 0.0000000031260423, y: 0.028919773, z: -5.646143e-11}
+      rotation: {x: -0.000005695211, y: 0.00000014994642, z: 0.00032673407, w: 0.99999994}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.99999994}
+    - name: Hand_R_end
+      parentName: Hand_R
+      position: {x: -0, y: 0.016066471, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Arm_L
+      parentName: "\uBCF8.002"
+      position: {x: -0.012141526, y: 0.0034229879, z: 0.00007982543}
+      rotation: {x: 0.0032570404, y: -0.0029590912, z: 0.7184378, w: 0.6955773}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: Arm2_L
+      parentName: Arm_L
+      position: {x: -3.6525308e-10, y: 0.020301182, z: -4.8894434e-11}
+      rotation: {x: -0.0002247916, y: 0.0000001904851, z: -0.012896659, w: 0.99991685}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+    - name: Hand_L
+      parentName: Arm2_L
+      position: {x: -0.0000000031260423, y: 0.028919773, z: -5.646143e-11}
+      rotation: {x: -0.000005695211, y: -0.00000014994642, z: -0.00032673407, w: 0.99999994}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.99999994}
+    - name: Hand_L_end
+      parentName: Hand_L
+      position: {x: -0, y: 0.016066471, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LEg_R
+      parentName: "\uBCF8"
+      position: {x: 0.0058790944, y: 0.0002015096, z: 0.0000000013165137}
+      rotation: {x: -0.00000037138338, y: 0.000000043034053, z: 0.997964, w: -0.06377891}
+      scale: {x: 1.0000005, y: 1, z: 1}
+    - name: Leg2_R
+      parentName: LEg_R
+      position: {x: -4.5918825e-15, y: 0.036946937, z: 1.4210854e-16}
+      rotation: {x: 0.000000036943096, y: 0.00000004552328, z: -0.046269037, w: 0.998929}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Foot_R
+      parentName: Leg2_R
+      position: {x: -0.0000000010430903, y: 0.033531457, z: 5.684342e-16}
+      rotation: {x: -0.039772794, y: 0.86500233, z: 0.4847473, w: 0.12332538}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Foot_R_end
+      parentName: Foot_R
+      position: {x: -0, y: 0.0076340414, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LEg_L
+      parentName: "\uBCF8"
+      position: {x: -0.0058790944, y: 0.0002015096, z: 0.0000000013165137}
+      rotation: {x: 0.00000037138338, y: 0.000000043034053, z: 0.997964, w: 0.06377891}
+      scale: {x: 1.0000005, y: 1, z: 1}
+    - name: Leg2_L
+      parentName: LEg_L
+      position: {x: 4.5918825e-15, y: 0.036946937, z: 1.4210854e-16}
+      rotation: {x: 0.000000036943096, y: -0.00000004552328, z: 0.046269037, w: 0.998929}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: Foot_L
+      parentName: Leg2_L
+      position: {x: 0.0000000010430903, y: 0.033531457, z: 5.684342e-16}
+      rotation: {x: -0.039772794, y: -0.86500233, z: -0.4847473, w: 0.12332538}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Foot_L_end
+      parentName: Foot_L
+      position: {x: -0, y: 0.0076340414, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -95,7 +220,7 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 3
+  animationType: 2
   humanoidOversampling: 1
   avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
