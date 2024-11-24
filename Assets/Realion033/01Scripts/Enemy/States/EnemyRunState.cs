@@ -13,6 +13,7 @@ namespace Realion033
         public override void OnEnter()
         {
             base.OnEnter();
+            _enemy._audioSource.Play();
         }
 
         public override void OnUpdate()
@@ -72,7 +73,7 @@ namespace Realion033
         public override void OnExit()
         {
             base.OnExit();
-
+            _enemy._audioSource.Stop();
             // 대시 방향 정보 초기화
             _dashDirection = Vector3.zero;
         }
