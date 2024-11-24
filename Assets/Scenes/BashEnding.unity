@@ -2351,7 +2351,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631232893}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.076455764, y: -0.057529237, z: -0.0044187596, w: 0.99540216}
+  m_LocalRotation: {x: 0.00048083588, y: 0.9981642, z: -0.060034174, w: 0.007994666}
   m_LocalPosition: {x: 0.06755352, y: 2.1033783, z: -1.785759}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8253,7 +8253,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045124164}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.25313956, y: -0.23221408, z: 0.06273155, w: 0.9370495}
+  m_LocalRotation: {x: -0.12177332, y: 0.87806034, z: -0.3180001, w: -0.3362399}
   m_LocalPosition: {x: 3.9633865, y: 5.1722946, z: -10.138979}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8628,7 +8628,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1207863164}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.05870148, y: 0.11651063, z: 0.0068984726, w: 0.9914292}
+  m_LocalRotation: {x: -0.047021523, y: 0.08911617, z: 0.0042118514, w: 0.99490184}
   m_LocalPosition: {x: -0.765, y: 1.7266271, z: -3.418}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9005,7 +9005,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228799071}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.007282346, y: 0.94144905, z: 0.020376725, w: 0.33646026}
+  m_LocalRotation: {x: 0.0024236252, y: 0.99753064, z: -0.054183166, w: 0.04461976}
   m_LocalPosition: {x: -1.0402585, y: 2.230211, z: 0.62962127}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -20035,7 +20035,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Jang-ju-min
 
-    (making baby)'
+    (hug)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
