@@ -21,7 +21,11 @@ public class GameManager : SingleTon<GameManager>
         Cursor.visible = false;
         OnStart?.Invoke();
     }
-    void QuitGame()
+    public void Scenes(int i)
+    {
+        SceneManager.LoadScene(i);
+    }
+    public void QuitGame()
     {
         Application.Quit(); // 게임 종료
     }

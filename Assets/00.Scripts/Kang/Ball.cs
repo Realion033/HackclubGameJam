@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour
 {
@@ -41,6 +42,14 @@ public class Ball : MonoBehaviour
                 _save = _out;
             }
             _out = transform.position;
+        }
+        
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "GoalDae")
+        {
+            SceneManager.LoadScene(5);
         }
     }
 }
