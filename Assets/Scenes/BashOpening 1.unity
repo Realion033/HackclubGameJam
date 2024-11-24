@@ -368,6 +368,8 @@ GameObject:
   m_Component:
   - component: {fileID: 165737808}
   - component: {fileID: 165737807}
+  - component: {fileID: 165737809}
+  - component: {fileID: 165737810}
   m_Layer: 0
   m_Name: TimeLine
   m_TagString: Untagged
@@ -434,6 +436,8 @@ PlayableDirector:
     value: {fileID: 585824974}
   - key: {fileID: -3092166673274661895, guid: da5e9ebd2d9aacd4c9c6e7bf3842c4c4, type: 2}
     value: {fileID: 585824974}
+  - key: {fileID: 9071557186168686095, guid: da5e9ebd2d9aacd4c9c6e7bf3842c4c4, type: 2}
+    value: {fileID: 165737809}
   m_ExposedReferences:
     m_References:
     - 471a8047878ea844a8b8e3ea5e725de0: {fileID: 1045124166}
@@ -461,6 +465,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &165737809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165737806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 92e870bbcae647844bd27878268aa302, type: 2}
+    - {fileID: 11400000, guid: 49dc0a24a52720848a6ee51c33329667, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 165737806}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 165737810}
+          m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+          m_MethodName: Scenes
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &165737810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165737806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148c9fdbfdaaa2c4baf2eb7d861faddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlaying: 0
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &194000250
 GameObject:
   m_ObjectHideFlags: 0
@@ -13826,7 +13891,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045124164}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.034580566, y: 0.9640081, z: 0.15794659, w: -0.21105833}
+  m_LocalRotation: {x: 0.034580577, y: 0.96400803, z: 0.15794659, w: -0.2110584}
   m_LocalPosition: {x: 1.409442, y: 0.9750464, z: -11.739316}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14677,7 +14742,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228799071}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.009334466, y: -0.019943312, z: -0.00018620532, w: 0.9997575}
+  m_LocalRotation: {x: -0.0093344655, y: -0.019943379, z: -0.00018620583, w: 0.9997575}
   m_LocalPosition: {x: 0.7581956, y: 1.6705072, z: 1.0816028}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -21617,10 +21682,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'MC Y.G.
+  m_text: 'MC
 
-    It''s the South Korea vs. Japan soccer match that everyone
-    has been waiting for.'
+    It''s the South Korea vs. Japan soccer match that everyone has
+    been waiting for.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

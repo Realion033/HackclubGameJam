@@ -2351,7 +2351,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631232893}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00048083684, y: 0.9981642, z: -0.060034182, w: 0.007994681}
+  m_LocalRotation: {x: 0.00048083588, y: 0.9981642, z: -0.060034174, w: 0.007994666}
   m_LocalPosition: {x: 0.06755352, y: 2.1033783, z: -1.785759}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8253,7 +8253,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045124164}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.12177333, y: 0.87806034, z: -0.31800014, w: -0.33623993}
+  m_LocalRotation: {x: -0.12177332, y: 0.87806034, z: -0.3180001, w: -0.3362399}
   m_LocalPosition: {x: 3.9633865, y: 5.1722946, z: -10.138979}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9005,7 +9005,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228799071}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.002423621, y: 0.99753064, z: -0.05418315, w: 0.04461965}
+  m_LocalRotation: {x: 0.0024236252, y: 0.99753064, z: -0.054183166, w: 0.04461976}
   m_LocalPosition: {x: -1.0402585, y: 2.230211, z: 0.62962127}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14231,52 +14231,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290382932}
   m_CullTransparentMesh: 1
---- !u!1 &1390671543
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1390671545}
-  - component: {fileID: 1390671544}
-  m_Layer: 0
-  m_Name: GameObject (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1390671544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390671543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5be3bedb7b32af6448808f17a5ea89c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: EndingCredit
-  secs: 20
---- !u!4 &1390671545
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390671543}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7954502, y: 57.669422, z: 368.591}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1504914364
 GameObject:
   m_ObjectHideFlags: 0
@@ -20081,7 +20035,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Jang-ju-min
 
-    (making baby)'
+    (hug)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -27309,4 +27263,3 @@ SceneRoots:
   - {fileID: 815998104}
   - {fileID: 852951821}
   - {fileID: 585824975}
-  - {fileID: 1390671545}

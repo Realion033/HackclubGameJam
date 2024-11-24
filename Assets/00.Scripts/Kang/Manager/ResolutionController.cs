@@ -55,6 +55,6 @@ public class ResolutionController : MonoBehaviour
     }
     public void Refresh()
     {
-        Screen.SetResolution(resolutions[resolutionNum].width, resolutions[resolutionNum].height, screenMode, resolutions[resolutionNum].refreshRateRatio);
+        //Screen.SetResolution(resolutions[resolutionNum].width, resolutions[resolutionNum].height, screenMode, resolutions[resolutionNum].refreshRateRatio);
     }
 }
