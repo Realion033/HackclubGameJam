@@ -62,6 +62,10 @@ public class PlayerMovement : MonoBehaviour
             _player.playerAnim.anim.SetInteger("Landing", 1);
         }
         _triggerCnt++;
+        if(other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            GetComponent<Rigidbody>().AddForce((other.transform.position - transform.position) * 2000f, ForceMode.Impulse);
+        }
     }
     private void OnTriggerStay(Collider other)
     {

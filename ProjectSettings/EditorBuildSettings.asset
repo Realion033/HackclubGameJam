@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/BashEnding.unity
+    guid: ec721fc38684b3f46aa9981dd97a66d2
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: cfb3bbd82134cc1449a6eda66a6b49b3, type: 3}
   m_UseUCBPForAssetBundles: 0
