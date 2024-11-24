@@ -7,7 +7,7 @@ namespace Realion033
     {
         protected Enemy _enemy;
         protected NavMeshAgent _navMesh;
-        private Rigidbody _rb;
+        public Rigidbody _rb;
 
         #region UNITY_FUNC
 

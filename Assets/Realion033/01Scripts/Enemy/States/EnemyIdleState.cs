@@ -13,6 +13,7 @@ namespace Realion033
         public override void OnEnter()
         {
             base.OnEnter();
+            _enemy.movement._rb.isKinematic = true;
             //SoundManager.Instance.PlayAudio();
         }
 
@@ -25,6 +26,7 @@ namespace Realion033
 
         public override void OnExit()
         {
+            _enemy.movement._rb.isKinematic = false;
             base.OnExit();
         }
 
