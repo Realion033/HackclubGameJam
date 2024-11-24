@@ -14,7 +14,7 @@ public class GameManager : SingleTon<GameManager>
     [HideInInspector] public bool isPlaying = false;
 
     public UnityEvent OnStart;
-    public void GameStart()//=====================Start=====================
+    public void Start()//=====================Start=====================
     {
         isPlaying = true;
         Cursor.lockState = CursorLockMode.Locked;
