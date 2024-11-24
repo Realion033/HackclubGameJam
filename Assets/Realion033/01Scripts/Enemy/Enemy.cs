@@ -14,9 +14,15 @@ namespace Realion033
         [SerializeField] private LayerMask _whatIsPlayer;
         [SerializeField] private LayerMask _whatIsObstacle;
 
+        [Header("Sound Source")]
+        public AudioClip chaseSound;
+        public AudioClip slideSound;
+        public AudioClip die;
+
         //component
         public Animator animator;
         public EnemyMovement movement;
+        public AudioSource _audioSource;
         private EnemyStateMachine _machine = new EnemyStateMachine();
 
         //protected
@@ -29,6 +35,7 @@ namespace Realion033
         {
             animator = GetComponentInChildren<Animator>();
             movement = GetComponent<EnemyMovement>();
+            _audioSource = GetComponent<AudioSource>();
 
             //endTrm = GameObject.Find("SetDestiend").GetComponent<Transform>();
 
