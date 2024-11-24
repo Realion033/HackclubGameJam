@@ -29,6 +29,11 @@ public class Ball : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            if (_out == Vector3.zero)
+            {
+                _out = transform.position;
+                return;
+            }
             if (_out.y - transform.position.y > 5f)
             {
                 ui.SetActive(true);

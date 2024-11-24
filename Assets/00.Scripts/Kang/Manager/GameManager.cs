@@ -14,14 +14,18 @@ public class GameManager : SingleTon<GameManager>
     [HideInInspector] public bool isPlaying = false;
 
     public UnityEvent OnStart;
-    public void GameStart()//=====================Start=====================
+    public void Start()//=====================Start=====================
     {
         isPlaying = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         OnStart?.Invoke();
     }
-    void QuitGame()
+    public void Scenes(int i)
+    {
+        SceneManager.LoadScene(i);
+    }
+    public void QuitGame()
     {
         Application.Quit(); // 게임 종료
     }
